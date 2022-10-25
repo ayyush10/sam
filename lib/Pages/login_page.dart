@@ -1,4 +1,5 @@
-import 'package:flutter/materia';
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -9,12 +10,24 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: Center(
-          child: Text(
-        "login page",
-        style: TextStyle(
-            fontSize: 20, color: Colors.blue, fontWeight: FontWeight.bold),
-      )),
-    );
+        color: Colors.white,
+        child: Column(
+          children: [
+            Image.asset(
+              "asset/image/loginpic.png",
+              fit: BoxFit.cover,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "Welcome",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            )
+          ],
+        ));
   }
 }
