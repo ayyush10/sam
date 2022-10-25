@@ -1,15 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:sam/home_page.dart';
+import 'Pages/home_page.dart';
 
 void main() {
   runApp(Sam());
 }
 
 class Sam extends StatelessWidget {
+  const Sam({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: homepage(),
+    return MaterialApp(
+      
+      themeMode: ThemeMode.light,
+      theme: ThemeData(primarySwatch: Colors.deepPurple),
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      initialRoute: "/home",
+      routes: {
+        "/":(context) => homepage()),
+        "/login": (context)=>LoginPage()
+      },
+    
     );
   }
 }
