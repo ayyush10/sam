@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sam/utlis/routes.dart';
+import 'package:sam/utlis/routes.dart';
 import 'Pages/home_page.dart';
 import 'Pages/login_page.dart';
 
@@ -24,8 +26,8 @@ class Sam extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => LoginPage(),
-        "/home": (context) => homepage(),
-        "/login": (context) => LoginPage()
+        MyRoutes.homeRoute: (context) => homepage(),
+        MyRoutes.loginRoute: (context) => LoginPage()
       },
     );
   }
