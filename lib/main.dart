@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sam/utlis/routes.dart';
+import 'package:sam/widgets/themes.dart';
 import 'Pages/home_page.dart';
 import 'Pages/login_page.dart';
 
@@ -15,13 +16,9 @@ class Sam extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       themeMode: ThemeMode.light,
-      theme: ThemeData(
-        primarySwatch: Colors.deepPurple,
-        fontFamily: GoogleFonts.lato().fontFamily,
-      ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-      ),
+      theme: MyTheme.LightTheme(context),
+      darkTheme: MyTheme.DarkTheme(context),
+      debugShowCheckedModeBanner: false,
       initialRoute: MyRoutes.homeRoute,
       routes: {
         "/": (context) => LoginPage(),
