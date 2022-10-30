@@ -10,13 +10,16 @@ class ItemWiget extends StatelessWidget {
         super(key: key);
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      leading: Image.asset(item.image),
-      title: Text(item.name),
-      subtitle: Text(item.desc),
-      trailing: Text(
-        "\$${item.price}",
-        style: TextStyle(color: Colors.purple, fontWeight: FontWeight.bold),
+    return Card(
+      child: ListTile(
+        onTap: print("${item.name} pressed"),
+        leading: Image.asset(item.image),
+        title: Text(item.name),
+        subtitle: Text(item.desc),
+        trailing: Text(
+          "\$${item.price}",
+          style: TextStyle(color: Colors.purple, fontWeight: FontWeight.bold),
+        ),
       ),
     );
   }
