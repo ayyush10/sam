@@ -10,8 +10,6 @@ void main() {
 }
 
 class Sam extends StatelessWidget {
-  const Sam({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

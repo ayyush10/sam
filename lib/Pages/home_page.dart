@@ -15,7 +15,7 @@ class homepage extends StatelessWidget {
         //   color: Colors.black,
 
         title: Text(
-          "Contest",
+          "Catalog App",
           style: TextStyle(color: Colors.black),
         ),
       ),
