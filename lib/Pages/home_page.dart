@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sam/Pages/models/catalog.dart';
 import 'package:sam/widgets/drawer.dart';
+import 'package:sam/widgets/item_widget.dart';
 
 // ignore: camel_case_types
 class homepage extends StatelessWidget {
@@ -19,9 +21,15 @@ class homepage extends StatelessWidget {
           style: TextStyle(color: Colors.black),
         ),
       ),
-      body: Center(
-        child: Container(
-          child: Text("Welcome to the app"),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: ListView.builder(
+          itemCount: CatalogModel.items.length,
+          itemBuilder: (context, index) {
+            return ItemWiget(
+              item: CatalogModel.items[index],
+            );
+          },
         ),
       ),
       drawer: MyDrawer(),
