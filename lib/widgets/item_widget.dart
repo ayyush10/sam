@@ -12,7 +12,9 @@ class ItemWiget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
-        onTap: print("${item.name} pressed"),
+        onTap: () {
+          print("${item.name} pressed");
+        },
         leading: Image.asset(item.image),
         title: Text(item.name),
         subtitle: Text(item.desc),
