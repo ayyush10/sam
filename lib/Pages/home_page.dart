@@ -16,6 +16,7 @@ class homepage extends StatefulWidget {
 class _homepageState extends State<homepage> {
   @override
   void initState() {
+    super.initState();
     loadData();
   }
 
