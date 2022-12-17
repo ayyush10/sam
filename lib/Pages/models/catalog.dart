@@ -13,21 +13,21 @@ class Item {
   final String image;
 
   Item({
-    required this.id,
-    required this.name,
-    required this.desc,
-    required this.price,
-    required this.color,
-    required this.image,
+    this.id,
+    this.name,
+    this.desc,
+    this.price,
+    this.color, 
+    this.image,
   });
 
   Item copyWith({
-    required int id,
-    required String name,
-    required String desc,
-    required num price,
-    required String color,
-    required String image,
+    int id,
+    String name,
+    String desc,
+    num price,
+    String color,
+    String image,
   }) {
     return Item(
       id: id,
